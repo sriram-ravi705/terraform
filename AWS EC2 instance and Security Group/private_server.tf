@@ -4,7 +4,8 @@ resource "aws_instance" "private_host" {
   security_groups = [aws_security_group.private_host_sg.id]
   subnet_id       = aws_subnet.private_subnet.id
   # associate_public_ip_address = "true"
-  key_name = "terrakey"
+  user_data = file("${path.module}/app-script.sh")
+  key_name  = "terrakey"
   tags = {
     Name = "private_host"
   }

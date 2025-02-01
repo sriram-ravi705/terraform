@@ -29,3 +29,9 @@ resource "aws_vpc_security_group_ingress_rule" "https" {
   cidr_ipv4         = "0.0.0.0/0"
   ip_protocol       = "tcp"
 }
+
+resource "aws_vpc_security_group_egress_rule" "All_traffic_public" {
+  security_group_id = aws_security_group.baston_host_sg.id
+  ip_protocol       = -1
+  cidr_ipv4         = "0.0.0.0/0"
+}

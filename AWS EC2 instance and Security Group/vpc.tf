@@ -37,7 +37,7 @@ resource "aws_route_table" "public_subnet_route" {
     gateway_id = aws_internet_gateway.vpc_dev_internet.id
   }
   tags = {
-    Name = "public subnet"
+    Name = "public route"
   }
 }
 
@@ -65,7 +65,7 @@ resource "aws_route_table" "private_subnet_route" {
     cidr_block     = "0.0.0.0/0"
   }
   tags = {
-    Name = "private subnet"
+    Name = "private route"
   }
 }
 
