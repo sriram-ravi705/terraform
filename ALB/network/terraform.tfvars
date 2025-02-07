@@ -1,0 +1,5 @@
+cidr_block = "123.117.0.0/16"
+a1_subnet_cidr_block = "123.117.1.0/24"
+a1_subnet_az = "us-east-1a"
+a2_subnet_cidr_block = "123.117.2.0/24"
+a2_subnet_az = "us-east-1b"
