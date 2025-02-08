@@ -9,5 +9,5 @@ terraform {
 
 provider "aws" {
   profile = "terraformuser"
-  region  = var.region_name
+  region  = "us-east-1"
 }
